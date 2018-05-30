@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxd-wT-32F">
+                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-Jc-KIw">
+                                <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RIc-Bs-5Ro"/>
+                                    <constraint firstAttribute="width" constant="40" id="da9-Cp-cxn"/>
+                                </constraints>
+                                <state key="normal" title="切换"/>
+                                <connections>
+                                    <action selector="toggleDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ek4-vy-zeJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-rE-qB2" userLabel="灯光">
+                                <rect key="frame" x="75" y="20" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8Ft-3r-lmZ"/>
+                                    <constraint firstAttribute="width" constant="80" id="WCH-NH-EpI"/>
+                                </constraints>
+                                <state key="normal" title="灯光(关)"/>
+                                <connections>
+                                    <action selector="toggleFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ZA-sP-0A3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-wa-pjI">
+                                <rect key="frame" x="149" y="571" width="76" height="76"/>
+                                <state key="normal" image="capture"/>
+                                <connections>
+                                    <action selector="capture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ume-5D-5hu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-Ho-QIF">
+                                <rect key="frame" x="10" y="527" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="ktH-i5-LHw"/>
+                                    <constraint firstAttribute="height" constant="130" id="ttG-3M-qub"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t9n-Jc-KIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1AO-Wi-hrr"/>
+                            <constraint firstItem="wlP-rE-qB2" firstAttribute="centerY" secondItem="t9n-Jc-KIw" secondAttribute="centerY" id="7ag-d9-JqG"/>
+                            <constraint firstItem="wlP-rE-qB2" firstAttribute="leading" secondItem="t9n-Jc-KIw" secondAttribute="trailing" constant="15" id="Phk-VM-gnc"/>
+                            <constraint firstItem="wxd-wT-32F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Q6G-2h-Ziy"/>
+                            <constraint firstItem="eNy-wa-pjI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SBo-rv-scf"/>
+                            <constraint firstItem="wxd-wT-32F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xiy-gF-2ka"/>
+                            <constraint firstItem="t9n-Jc-KIw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XrY-dX-AgL"/>
+                            <constraint firstItem="wlP-rE-qB2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZcI-Wy-yVx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5kT-Ho-QIF" secondAttribute="bottom" constant="10" id="bfb-IS-j9d"/>
+                            <constraint firstItem="wxd-wT-32F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="c6u-XA-HCS"/>
+                            <constraint firstItem="5kT-Ho-QIF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fFp-0F-Frv"/>
+                            <constraint firstItem="wxd-wT-32F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tBA-GE-xZI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eNy-wa-pjI" secondAttribute="bottom" constant="20" id="wUn-2h-Ibx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="capturedImageView" destination="5kT-Ho-QIF" id="Z4z-2d-o9J"/>
+                        <outlet property="previewView" destination="wxd-wT-32F" id="PbW-fJ-sVR"/>
+                        <outlet property="toggleBtn" destination="t9n-Jc-KIw" id="Tar-uD-cFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="capture" width="76" height="76"/>
+    </resources>
+</document>
