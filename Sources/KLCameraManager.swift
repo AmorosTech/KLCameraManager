@@ -30,7 +30,7 @@ extension KLCameraManager {
             }) { (finished) in
                 let timer = Timer.scheduledTimer(timeInterval: 0.5,
                                                  target: self,
-                                                 selector: #selector(KLCameraManager.abcc),
+                                                 selector: #selector(KLCameraManager.dismissFocusEffectView),
                                                  userInfo: nil,
                                                  repeats: false)
                 RunLoop.current.add(timer, forMode: .commonModes)
@@ -38,7 +38,7 @@ extension KLCameraManager {
             }
         }
     }
-    @objc private func abcc() {
+    @objc private func dismissFocusEffectView() {
         self.focusEffectView.isHidden = true
         focusEffectHiddenTimer = nil
     }
